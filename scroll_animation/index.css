@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(239, 239, 217);
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    height: 100vh;
+    width: 100vw;
+    transition: all 0.6s ease-in-out;
+}
+
+.container {
+    padding-top: 75px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Initial hidden state for boxes */
+.box {
+    display: flex;
+    width: 50vw;
+    height: 27vh;
+    background-color: blue;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 55px;
+    transform: translateX(-150%);
+    /* Hide boxes initially */
+    transition: transform 1s ease-in-out;
+}
+
+/* Even boxes slide from right */
+.box:nth-child(even) {
+    transform: translateX(150%);
+}
+
+.box.show {
+    opacity:1;
+    transform: translateX(0) !important;
+    transition: transform 0.6s ease-in-out;
+}
+
