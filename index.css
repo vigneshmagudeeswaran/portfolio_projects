@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --left-bg-color: rgba(87, 84, 236, 0.7);
+    --right-bg-color: rgba(43, 43, 43, 0.8);
+    --left-btn-hover-color: rgba(87, 84, 236, 1);
+    --right-btn-hover-color: rgba(28, 122, 28, 1);
+    --hover-width: 95%;
+    --other-width: 5%;
+    --speed: 1000ms;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container{
+    width:100vw;
+    height:100vh;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    text-wrap: nowrap;
+}
+h1{
+    color:aliceblue;
+    font-size: 2rem;
+    padding:0;
+}
+
+a{ display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color:transparent;
+    color:white;
+    border-width: 4px;
+    border-color: white;
+    border-style:solid;
+    /* padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px; */
+    width: 12rem;
+    height:4rem;
+    padding:2px;
+    text-decoration: none;
+    text-transform: uppercase
+}
+.split{
+    display:flex;
+    flex-direction: column;
+    width: 50vw;
+    height:100vh;
+    align-items: center;
+    justify-content: top;
+    padding: 200px;
+    gap:10px;
+
+}
+
+.split.left{
+    background-color: var(--left-bg-color);
+    background-image: url('ps.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+.split.right{
+    background-color: var(--right-bg-color);
+    background: url('xbox.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+
+.split.left:hover{
+    width: var(--hover-width);
+    transition: width 0.5s ease-in-out;
+}
+
+.split.right:hover{
+    width: var(--hover-width);
+    transition: width 0.5s ease-in-out;
+}
+
+@media (max-width:800px) {
+    h1{
+        font-size: 2rem;
+    }
+   a {
+            width: 8rem;
+            height:3rem;
+            padding:2px;
+        }
+}
+
