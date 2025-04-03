@@ -10,6 +10,7 @@
     --speed: 1000ms;
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -31,6 +32,8 @@ body {
     justify-content: center;
     text-wrap: nowrap;
 }
+
+
 h1{
     color:aliceblue;
     font-size: 2rem;
@@ -54,6 +57,7 @@ a{ display: flex;
     text-decoration: none;
     text-transform: uppercase
 }
+
 .split{
     display:flex;
     flex-direction: column;
